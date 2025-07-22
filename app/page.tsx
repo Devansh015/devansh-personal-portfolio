@@ -126,7 +126,7 @@ export default function Portfolio() {
               linkedin
             </Link>
             <span className="mx-2">/</span>
-            <Link href="https://twitter.com/devansh" className="hover:underline" target="_blank">
+            <Link href="https://x.com/__devanshjain" className="hover:underline" target="_blank">
               twitter
             </Link>
             <span className="mx-2">/</span>
