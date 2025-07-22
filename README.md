@@ -2,6 +2,8 @@
 
 Welcome to my personal website!  
 This sites main purpose is to showcase my projects, share my experiences, and provide ways to connect with me.
+<img width="1710" height="979" alt="Screenshot 2025-07-22 at 11 48 12 AM" src="https://github.com/user-attachments/assets/fb512d27-382e-4a3d-8541-116f3605bdcf" />
+
 
 🔗 [Live Site](https://devanshjain.vercel.app/)
 
