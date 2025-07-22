@@ -145,7 +145,7 @@ export default function Portfolio() {
           <div className="mb-4 sm:mb-0">© 2025 | Devansh Jain</div>
           <div className="flex items-center space-x-4">
             <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:underline">
-              Back to top
+              Back to the top
             </button>
             <button
               onClick={toggleTheme}
