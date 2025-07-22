@@ -21,14 +21,8 @@ export default function Portfolio() {
             Devansh Jain
           </h1>
           <nav className="text-sm">
-            <Link href="/blog" className="hover:underline mr-6">
+            <Link href="/blog" className="hover:underline">
               blog
-            </Link>
-            <Link href="/work" className="hover:underline mr-6">
-              work
-            </Link>
-            <Link href="/projects" className="hover:underline">
-              projects
             </Link>
           </nav>
         </header>
@@ -43,8 +37,8 @@ export default function Portfolio() {
             <li>🧠 I enjoy building meaningful full-stack apps</li>
           </ul>
           <p className="leading-relaxed">
-            In my free time, I enjoy reading nonfiction, thinking about design systems, and working on developer tools
-            that solve real-world problems.
+            In my free time, I enjoy film, basketball, and learning more about machine learning to help solve real-world
+            problems.
           </p>
         </section>
 
@@ -61,17 +55,17 @@ export default function Portfolio() {
           <ul className="space-y-3">
             <li>
               <Link href="/blog/summer-2025-internship-shopify" className="hover:underline">
-                • Summer 2025 Internship at Shopify
+                • Interning at an Engineering Consulting Firm Summer 2025
               </Link>
             </li>
             <li>
               <Link href="/blog/brain-simulation-engine" className="hover:underline">
-                • Why I Built a Brain Simulation Engine
+                • What University Doesn't Teach You About Real World development
               </Link>
             </li>
             <li>
               <Link href="/blog/learning-relational-algebra" className="hover:underline">
-                • Notes on Learning Relational Algebra
+                • Notes on Learning Linear Algebra
               </Link>
             </li>
           </ul>
@@ -90,7 +84,7 @@ export default function Portfolio() {
           <ul className="space-y-3">
             <li>
               <Link href="/projects/darp" className="hover:underline">
-                • DARP – Cellular Automata for Brain Simulation
+                • DARP – Brain Simulation using Cellular Automata
               </Link>
             </li>
             <li>
@@ -100,7 +94,7 @@ export default function Portfolio() {
             </li>
             <li>
               <Link href="/projects/url-shortener" className="hover:underline">
-                • URL Shortener – Fast & Minimal Link Tool
+                • URL Shortener – Fast & Minimal Link Tool in Go
               </Link>
             </li>
           </ul>
@@ -117,18 +111,18 @@ export default function Portfolio() {
         {/* Know More Section */}
         <section className="mb-16">
           <h2 className={`text-lg font-semibold mb-6 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-            Know More
+            Let's Connect!
           </h2>
           <div className="text-sm">
             <Link href="mailto:devansh@example.com" className="hover:underline" target="_blank">
               email
             </Link>
             <span className="mx-2">/</span>
-            <Link href="https://github.com/devansh" className="hover:underline" target="_blank">
+            <Link href="https://github.com/Devansh015" className="hover:underline" target="_blank">
               github
             </Link>
             <span className="mx-2">/</span>
-            <Link href="https://linkedin.com/in/devansh" className="hover:underline" target="_blank">
+            <Link href="https://linkedin.com/in/devanshj15" className="hover:underline" target="_blank">
               linkedin
             </Link>
             <span className="mx-2">/</span>
