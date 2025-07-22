@@ -33,7 +33,7 @@ export default function Portfolio() {
             👋 Hi, I'm <TypewriterName />
           </h2>
           <ul className="mb-6 space-y-2">
-            <li>🎓 Computer Science @ Wilfrid Laurier University</li>
+            <li>🎓 Third Year Computer Science @ Wilfrid Laurier University</li>
             <li>🧠 I enjoy building meaningful full-stack apps</li>
           </ul>
           <p className="leading-relaxed">
