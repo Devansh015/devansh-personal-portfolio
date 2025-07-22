@@ -1,0 +1,41 @@
+"use client"
+
+import { useEffect, useState } from "react"
+
+interface DegreeProgressProps {
+  theme: "light" | "dark"
+}
+
+export default function DegreeProgress({ theme }: DegreeProgressProps) {
+  const [progress, setProgress] = useState({ days: 0, total: 0, percentage: 0 })
+
+  useEffect(() => {
+    // Set your actual degree dates here
+    const startDate = new Date("2022-09-01") // Your degree start date
+    const endDate = new Date("2026-04-30") // Your expected graduation date
+    const today = new Date()
+
+    const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
+    const daysPassed = Math.ceil((today.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))
+    const percentage = Math.min((daysPassed / totalDays) * 100, 100)
+
+    setProgress({
+      days: Math.max(daysPassed, 0),
+      total: totalDays,
+      percentage: Math.max(percentage, 0),
+    })
+  }, [])
+
+  // Create progress bar visualization
+  const totalBlocks = 24
+  const filledBlocks = Math.round((progress.percentage / 100) * totalBlocks)
+  const progressBar = "█".repeat(filledBlocks) + "░".repeat(totalBlocks - filledBlocks)
+
+  return (
+    <div className={`font-mono text-sm ${theme === "dark" ? "text-[#d4d4d4]" : "text-gray-700"}`}>
+      <span>
+        [{progressBar}] {progress.days} / {progress.total} days ({progress.percentage.toFixed(1)}%)
+      </span>
+    </div>
+  )
+}
