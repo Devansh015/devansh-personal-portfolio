@@ -11,8 +11,8 @@ export default function DegreeProgress({ theme }: DegreeProgressProps) {
 
   useEffect(() => {
     // Set your actual degree dates here
-    const startDate = new Date("2022-09-01") // Your degree start date
-    const endDate = new Date("2026-04-30") // Your expected graduation date
+    const startDate = new Date("2023-09-01") // Your degree start date
+    const endDate = new Date("2027-04-30") // Your expected graduation date
     const today = new Date()
 
     const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24))

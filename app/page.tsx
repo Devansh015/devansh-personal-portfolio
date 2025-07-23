@@ -77,23 +77,23 @@ export default function Portfolio() {
             <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
               Recent Projects
             </h2>
-            <Link href="/projects" className="text-sm hover:underline">
+            <Link href="https://github.com/Devansh015?tab=repositories" className="text-sm hover:underline">
               See all projects
             </Link>
           </div>
           <ul className="space-y-3">
             <li>
-              <Link href="/projects/darp" className="hover:underline">
+              <Link href="https://github.com/Devansh015/DARP" className="hover:underline">
                 • DARP – Brain Simulation using Cellular Automata
               </Link>
             </li>
             <li>
-              <Link href="/projects/wlunest" className="hover:underline">
+              <Link href="https://github.com/Devansh015/wluNest-App" className="hover:underline">
                 • wluNest – Student Housing Database
               </Link>
             </li>
             <li>
-              <Link href="/projects/url-shortener" className="hover:underline">
+              <Link href="https://github.com/Devansh015/go-url-shortner" className="hover:underline">
                 • URL Shortener – Fast & Minimal Link Tool in Go
               </Link>
             </li>
