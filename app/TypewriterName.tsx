@@ -8,7 +8,7 @@ export default function TypewriterName() {
   const [isDeleting, setIsDeleting] = useState(false)
   const [nameIndex, setNameIndex] = useState(0)
 
-  const names = ["Devansh", "Dev"]
+  const names = ["Devansh!", "Dev!"]
   const currentName = names[nameIndex]
 
   useEffect(() => {
@@ -43,7 +43,7 @@ export default function TypewriterName() {
   }, [currentIndex, isDeleting, nameIndex, currentName])
 
   return (
-    <span className="inline-block text-[120px] font-bold">
+    <span className="inline font-bold">
       {displayText}
       <span className="animate-pulse">|</span>
     </span>
