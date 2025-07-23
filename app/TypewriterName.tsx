@@ -43,7 +43,7 @@ export default function TypewriterName() {
   }, [currentIndex, isDeleting, nameIndex, currentName])
 
   return (
-    <span className="inline-block">
+    <span className="inline-block text-[120px] font-bold">
       {displayText}
       <span className="animate-pulse">|</span>
     </span>
