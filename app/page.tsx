@@ -29,8 +29,9 @@ export default function Portfolio() {
 
         {/* Introduction Section */}
         <section className="mb-16">
-          <h2 className={`text-lg font-bold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-            👋 Hi, I'm <TypewriterName />
+          <h2 className={`text-4xl font-bold mb-4 flex items-baseline gap-2 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+            <span>Hi, I'm</span>
+            <TypewriterName/>
           </h2>
           <ul className="mb-6 space-y-2">
             <li>🎓 Third Year Computer Science @ Wilfrid Laurier University</li>
