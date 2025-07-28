@@ -115,7 +115,7 @@ export default function Portfolio() {
             Let's Connect!
           </h2>
           <div className="text-sm">
-            <Link href="mailto:devansh@example.com" className="hover:underline" target="_blank">
+            <Link href="mailto:devansh_jain@outlook.com" className="hover:underline" target="_blank">
               email
             </Link>
             <span className="mx-2">/</span>
@@ -131,7 +131,7 @@ export default function Portfolio() {
               twitter
             </Link>
             <span className="mx-2">/</span>
-            <Link href="/resume.pdf" className="hover:underline" target="_blank">
+            <Link href="/2025Resume.pdf" className="hover:underline" target="_blank" rel="noopener noreferrer">
               resume
             </Link>
           </div>
