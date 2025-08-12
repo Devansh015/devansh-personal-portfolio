@@ -60,7 +60,7 @@ export default function Portfolio() {
               </Link>
             </li>
             <li>
-              <Link href="/blog/brain-simulation-engine" className="hover:underline">
+              <Link href="https://open.substack.com/pub/devanshjaiin/p/what-university-doesnt-teach-you?r=6ahwx6&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" className="hover:underline">
                 • What University Doesn't Teach You About Real World development
               </Link>
             </li>
