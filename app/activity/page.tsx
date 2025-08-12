@@ -53,6 +53,18 @@ export default function ActivityPage() {
             </div>
           </div>
 
+          {/* Contribution Heatmap */}
+          <div className="mb-12">
+            <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+              Contribution Activity
+            </h3>
+            <img 
+              src={`https://ghchart.rshah.org/${theme === "dark" ? "white" : "black"}/Devansh015`}
+              alt="GitHub Contribution Heatmap"
+              className="rounded-lg max-w-full h-auto"
+            />
+          </div>
+
           {/* Language Stats */}
           <div className="mb-12">
             <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
