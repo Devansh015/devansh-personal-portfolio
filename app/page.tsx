@@ -20,9 +20,12 @@ export default function Portfolio() {
           <h1 className={`text-xl font-bold mb-4 sm:mb-0 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
             Devansh Jain
           </h1>
-          <nav className="text-sm">
+          <nav className="text-sm space-x-4">
             <Link href="/blog" className="hover:underline">
               blog
+            </Link>
+            <Link href="/activity" className="hover:underline">
+              activity
             </Link>
           </nav>
         </header>
