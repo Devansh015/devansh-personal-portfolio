@@ -21,7 +21,7 @@ export default function Portfolio() {
             Devansh Jain
           </h1>
           <nav className="text-sm space-x-4">
-            <Link href="/blog" className="hover:underline">
+            <Link href="https://substack.com/@devanshjaiin" className="hover:underline">
               blog
             </Link>
             <Link href="/activity" className="hover:underline">
