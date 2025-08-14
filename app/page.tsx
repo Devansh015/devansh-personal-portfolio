@@ -52,7 +52,7 @@ export default function Portfolio() {
             <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
               Latest Posts
             </h2>
-            <Link href="/blog" className="text-sm hover:underline">
+            <Link href="https://substack.com/@devanshjaiin"className="text-sm hover:underline">
               See all posts
             </Link>
           </div>
