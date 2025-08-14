@@ -47,7 +47,7 @@ export default function Portfolio() {
         </section>
 
         {/* Latest Posts Section */}
-        <section className="mb-16">
+        <section className="mb-8">
           <div className="flex justify-between items-center mb-6">
             <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
               Latest Posts
