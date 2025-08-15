@@ -88,7 +88,7 @@ export default function Portfolio() {
           <ul className="space-y-3">
             <li>
               <Link href="https://github.com/Devansh015/DARP" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • DARP – Brain Simulation using Cellular Automata
+                • Neuropharma-Simlab – Brain Simulation using Cellular Automata
               </Link>
             </li>
             <li>
