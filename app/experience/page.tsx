@@ -2,11 +2,76 @@
 
 import Link from "next/link"
 import { useTheme } from "../ThemeProvider"
+import { memo, useMemo, useCallback } from "react"
+
+// Memoized experience card component
+const ExperienceCard = memo(({ 
+  experience, 
+  theme 
+}: { 
+  experience: {
+    company: string
+    position: string
+    duration: string
+    location: string
+    description: string[]
+    technologies: string[]
+  }
+  theme: "light" | "dark"
+}) => (
+  <div
+    className={`p-6 rounded-xl border ${
+      theme === "dark" 
+        ? "bg-gray-900/50 border-gray-800" 
+        : "bg-gray-50 border-gray-200"
+    }`}
+  >
+    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
+      <div>
+        <h3 className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+          {experience.position}
+        </h3>
+        <p className={`text-lg font-medium ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}>
+          {experience.company}
+        </p>
+      </div>
+      <div className={`text-sm ${theme === "dark" ? "text-gray-400" : "text-gray-600"} mt-2 sm:mt-0 sm:text-right`}>
+        <p className="font-medium">{experience.duration}</p>
+        <p>{experience.location}</p>
+      </div>
+    </div>
+
+    <div className="mb-4">
+      {experience.description.map((item, i) => (
+        <p key={i} className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"} mb-2`}>
+          {item}
+        </p>
+      ))}
+    </div>
+
+    <div className="flex flex-wrap gap-2">
+      {experience.technologies.map((tech, i) => (
+        <span
+          key={i}
+          className={`px-3 py-1 rounded-full text-xs font-medium ${
+            theme === "dark" 
+              ? "bg-gray-800 text-gray-300 border border-gray-700" 
+              : "bg-white text-gray-700 border border-gray-300"
+          }`}
+        >
+          {tech}
+        </span>
+      ))}
+    </div>
+  </div>
+))
+
+ExperienceCard.displayName = 'ExperienceCard'
 
 export default function ExperiencePage() {
   const { theme, toggleTheme } = useTheme()
 
-  const experiences = [
+  const experiences = useMemo(() => [
     {
       company: "Jain Consultants",
       position: "Software Engineering Intern",
@@ -19,7 +84,7 @@ export default function ExperiencePage() {
     },
     {
       company: "OneDrug",
-      position: "Software Engineering Intern",
+      position: "Software Engineering Intern", 
       duration: "May 2024 - August 2024",
       location: "Toronto, Ontario",
       description: [
@@ -27,7 +92,6 @@ export default function ExperiencePage() {
       ],
       technologies: ["SQL", "React"]
     },
-    // Add more experiences as needed
     {
       company: "Accumine Technologies",
       position: "Software Engineering Intern",
@@ -38,7 +102,11 @@ export default function ExperiencePage() {
       ],
       technologies: ["React"]
     }
-  ]
+  ], [])
+
+  const handleScrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [])
 
   return (
     <div
@@ -47,7 +115,6 @@ export default function ExperiencePage() {
       }`}
     >
       <div className="max-w-[720px] mx-auto px-6 py-8">
-        {/* Header */}
         <header className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-16">
           <h1 className={`text-xl font-bold mb-4 sm:mb-0 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
             <Link href="/" className="hover:underline">Devansh Jain</Link>
@@ -65,9 +132,7 @@ export default function ExperiencePage() {
           </nav>
         </header>
 
-        {/* Experience Page Content */}
         <div className="space-y-8">
-          {/* Page Title */}
           <div className="text-center mb-12">
             <h2 className={`text-4xl font-bold mb-3 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
               Work Experience
@@ -77,62 +142,12 @@ export default function ExperiencePage() {
             </p>
           </div>
 
-          {/* Experience Timeline */}
           <div className="space-y-8">
             {experiences.map((exp, index) => (
-              <div
-                key={index}
-                className={`p-6 rounded-xl border ${
-                  theme === "dark" 
-                    ? "bg-gray-900/50 border-gray-800" 
-                    : "bg-gray-50 border-gray-200"
-                }`}
-              >
-                {/* Job Header */}
-                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4">
-                  <div>
-                    <h3 className={`text-xl font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-                      {exp.position}
-                    </h3>
-                    <p className={`text-lg font-medium ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}>
-                      {exp.company}
-                    </p>
-                  </div>
-                  <div className={`text-sm ${theme === "dark" ? "text-gray-400" : "text-gray-600"} mt-2 sm:mt-0 sm:text-right`}>
-                    <p className="font-medium">{exp.duration}</p>
-                    <p>{exp.location}</p>
-                  </div>
-                </div>
-
-                {/* Description */}
-                <div className="mb-4">
-                  {exp.description.map((item, i) => (
-                    <p key={i} className={`${theme === "dark" ? "text-gray-300" : "text-gray-700"} mb-2`}>
-                      {item}
-                    </p>
-                  ))}
-                </div>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech, i) => (
-                    <span
-                      key={i}
-                      className={`px-3 py-1 rounded-full text-xs font-medium ${
-                        theme === "dark" 
-                          ? "bg-gray-800 text-gray-300 border border-gray-700" 
-                          : "bg-white text-gray-700 border border-gray-300"
-                      }`}
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-              </div>
+              <ExperienceCard key={`${exp.company}-${index}`} experience={exp} theme={theme} />
             ))}
           </div>
 
-          {/* Additional Info Section */}
           <div className={`p-6 rounded-xl border text-center ${
             theme === "dark" 
               ? "bg-gray-900/50 border-gray-800" 
@@ -144,9 +159,33 @@ export default function ExperiencePage() {
             <p className={`${theme === "dark" ? "text-gray-400" : "text-gray-600"} mb-4`}>
               I'm actively seeking internships and full-time opportunities in software development.
             </p>
-            </div> className="space-x-4"</div>
+            <div className="space-x-4">
+              <Link 
+                href="/2025Resume.pdf" 
+                className={`inline-block px-6 py-2 rounded-lg border transition-colors ${
+                  theme === "dark" 
+                    ? "border-gray-700 hover:border-gray-600 hover:bg-gray-800/50" 
+                    : "border-gray-300 hover:border-gray-400 hover:bg-white"
+                }`}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                📄 View Resume
+              </Link>
+              <Link 
+                href="mailto:devansh_jain@outlook.com" 
+                className={`inline-block px-6 py-2 rounded-lg border transition-colors ${
+                  theme === "dark" 
+                    ? "border-blue-700 hover:border-blue-600 hover:bg-blue-900/20 text-blue-400" 
+                    : "border-blue-300 hover:border-blue-400 hover:bg-blue-50 text-blue-600"
+                }`}
+              >
+                📧 Get in Touch
+              </Link>
+            </div>
+          </div>
+        </div>
 
-        {/* Footer */}
         <footer
           className={`flex flex-col sm:flex-row sm:justify-between sm:items-center pt-8 border-t text-sm mt-16 ${
             theme === "dark" ? "border-gray-800" : "border-gray-200"
@@ -154,7 +193,7 @@ export default function ExperiencePage() {
         >
           <div className="mb-4 sm:mb-0">© 2025 | Devansh Jain</div>
           <div className="flex items-center space-x-4">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:underline">
+            <button onClick={handleScrollToTop} className="hover:underline">
               Back to the top
             </button>
             <button

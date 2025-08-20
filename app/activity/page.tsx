@@ -2,9 +2,131 @@
 
 import Link from "next/link"
 import { useTheme } from "../ThemeProvider"
+import { memo, useMemo, useState, useCallback } from "react"
+
+// Memoized components for better performance
+const GitHubStatsCard = memo(({ theme }: { theme: "light" | "dark" }) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  
+  return (
+    <div className={`p-6 rounded-xl border ${
+      theme === "dark" 
+        ? "bg-gray-900/50 border-gray-800" 
+        : "bg-gray-50 border-gray-200"
+    }`}>
+      <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+        📊 Overview
+      </h3>
+      {!imageLoaded && (
+        <div className={`h-48 rounded animate-pulse ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"}`} />
+      )}
+      <img 
+        src={`https://github-readme-stats.vercel.app/api?username=Devansh015&show_icons=true&theme=${theme === "dark" ? "dark" : "light"}&count_private=true&hide_border=true&cache_seconds=1800`}
+        alt="GitHub Stats"
+        className={`w-full h-auto transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setImageLoaded(true)}
+        loading="lazy"
+      />
+    </div>
+  )
+})
+
+const StreakCard = memo(({ theme }: { theme: "light" | "dark" }) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  
+  return (
+    <div className={`p-6 rounded-xl border ${
+      theme === "dark" 
+        ? "bg-gray-900/50 border-gray-800" 
+        : "bg-gray-50 border-gray-200"
+    }`}>
+      <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+        🔥 Streak
+      </h3>
+      {!imageLoaded && (
+        <div className={`h-48 rounded animate-pulse ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"}`} />
+      )}
+      <img 
+        src={`https://github-readme-streak-stats.herokuapp.com/?user=Devansh015&theme=${theme === "dark" ? "dark" : "light"}&hide_border=true&cache_seconds=1800`}
+        alt="GitHub Streak"
+        className={`w-full h-auto transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setImageLoaded(true)}
+        loading="lazy"
+      />
+    </div>
+  )
+})
+
+const ContributionCard = memo(({ theme }: { theme: "light" | "dark" }) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  
+  return (
+    <div className={`p-6 rounded-xl border ${
+      theme === "dark" 
+        ? "bg-gray-900/50 border-gray-800" 
+        : "bg-gray-50 border-gray-200"
+    } mb-8`}>
+      <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+        📅 Contribution Activity
+      </h3>
+      <div className="overflow-x-auto">
+        {!imageLoaded && (
+          <div className={`h-32 rounded animate-pulse ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"} min-w-[800px]`} />
+        )}
+        <img 
+          src={`https://ghchart.rshah.org/${theme === "dark" ? "white" : "black"}/Devansh015`}
+          alt="GitHub Contribution Heatmap"
+          className={`w-full h-auto min-w-[800px] transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={() => setImageLoaded(true)}
+          loading="lazy"
+        />
+      </div>
+      <p className={`text-sm mt-3 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
+        Past year of contributions • Updated daily
+      </p>
+    </div>
+  )
+})
+
+const LanguagesCard = memo(({ theme }: { theme: "light" | "dark" }) => {
+  const [imageLoaded, setImageLoaded] = useState(false)
+  
+  return (
+    <div className={`lg:col-span-2 p-6 rounded-xl border ${
+      theme === "dark" 
+        ? "bg-gray-900/50 border-gray-800" 
+        : "bg-gray-50 border-gray-200"
+    }`}>
+      <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+        💻 Most Used Languages
+      </h3>
+      {!imageLoaded && (
+        <div className={`h-48 rounded animate-pulse ${theme === "dark" ? "bg-gray-800" : "bg-gray-200"}`} />
+      )}
+      <img 
+        src={`https://github-readme-stats.vercel.app/api/top-langs/?username=Devansh015&layout=compact&theme=${theme === "dark" ? "dark" : "light"}&hide_border=true&cache_seconds=1800`}
+        alt="Top Languages"
+        className={`w-full h-auto transition-opacity duration-300 ${imageLoaded ? 'opacity-100' : 'opacity-0'}`}
+        onLoad={() => setImageLoaded(true)}
+        loading="lazy"
+      />
+    </div>
+  )
+})
+
+// Set display names for better debugging
+GitHubStatsCard.displayName = 'GitHubStatsCard'
+StreakCard.displayName = 'StreakCard'
+ContributionCard.displayName = 'ContributionCard'
+LanguagesCard.displayName = 'LanguagesCard'
 
 export default function ActivityPage() {
   const { theme, toggleTheme } = useTheme()
+
+  // Memoize scroll handler to prevent unnecessary re-renders
+  const handleScrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [])
 
   return (
     <div
@@ -45,77 +167,16 @@ export default function ActivityPage() {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-            {/* GitHub Stats Card */}
-            <div className={`p-6 rounded-xl border ${
-              theme === "dark" 
-                ? "bg-gray-900/50 border-gray-800" 
-                : "bg-gray-50 border-gray-200"
-            }`}>
-              <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-                📊 Overview
-              </h3>
-              <img 
-                src={`https://github-readme-stats.vercel.app/api?username=Devansh015&show_icons=true&theme=${theme === "dark" ? "dark" : "light"}&count_private=true&hide_border=true`}
-                alt="GitHub Stats"
-                className="w-full h-auto"
-              />
-            </div>
-
-            {/* Streak Card */}
-            <div className={`p-6 rounded-xl border ${
-              theme === "dark" 
-                ? "bg-gray-900/50 border-gray-800" 
-                : "bg-gray-50 border-gray-200"
-            }`}>
-              <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-                🔥 Streak
-              </h3>
-              <img 
-                src={`https://github-readme-streak-stats.herokuapp.com/?user=Devansh015&theme=${theme === "dark" ? "dark" : "light"}&hide_border=true`}
-                alt="GitHub Streak"
-                className="w-full h-auto"
-              />
-            </div>
+            <GitHubStatsCard theme={theme} />
+            <StreakCard theme={theme} />
           </div>
 
           {/* Contribution Heatmap Card */}
-          <div className={`p-6 rounded-xl border ${
-            theme === "dark" 
-              ? "bg-gray-900/50 border-gray-800" 
-              : "bg-gray-50 border-gray-200"
-          } mb-8`}>
-            <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-              📅 Contribution Activity
-            </h3>
-            <div className="overflow-x-auto">
-              <img 
-                src={`https://ghchart.rshah.org/${theme === "dark" ? "white" : "black"}/Devansh015`}
-                alt="GitHub Contribution Heatmap"
-                className="w-full h-auto min-w-[800px]"
-              />
-            </div>
-            <p className={`text-sm mt-3 ${theme === "dark" ? "text-gray-400" : "text-gray-600"}`}>
-              Past year of contributions • Updated daily
-            </p>
-          </div>
+          <ContributionCard theme={theme} />
 
           {/* Bottom Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            {/* Languages Card */}
-            <div className={`lg:col-span-2 p-6 rounded-xl border ${
-              theme === "dark" 
-                ? "bg-gray-900/50 border-gray-800" 
-                : "bg-gray-50 border-gray-200"
-            }`}>
-              <h3 className={`text-lg font-semibold mb-4 ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-                💻 Most Used Languages
-              </h3>
-              <img 
-                src={`https://github-readme-stats.vercel.app/api/top-langs/?username=Devansh015&layout=compact&theme=${theme === "dark" ? "dark" : "light"}&hide_border=true`}
-                alt="Top Languages"
-                className="w-full h-auto"
-              />
-            </div>
+            <LanguagesCard theme={theme} />
 
             {/* Quick Links Card */}
             <div className={`p-6 rounded-xl border ${
@@ -179,7 +240,7 @@ export default function ActivityPage() {
         >
           <div className="mb-4 sm:mb-0">© 2025 | Devansh Jain</div>
           <div className="flex items-center space-x-4">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:underline">
+            <button onClick={handleScrollToTop} className="hover:underline">
               Back to the top
             </button>
             <button

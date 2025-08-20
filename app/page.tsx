@@ -4,9 +4,15 @@ import Link from "next/link"
 import DegreeProgress from "./DegreeProgress"
 import TypewriterName from "./TypewriterName"
 import { useTheme } from "./ThemeProvider"
+import { useCallback } from "react"
 
 export default function Portfolio() {
   const { theme, toggleTheme } = useTheme()
+
+  // Memoize scroll handler to prevent unnecessary re-renders
+  const handleScrollToTop = useCallback(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }, [])
 
   return (
     <div
@@ -151,7 +157,7 @@ export default function Portfolio() {
         >
           <div className="mb-4 sm:mb-0">© 2025 | Devansh Jain</div>
           <div className="flex items-center space-x-4">
-            <button onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })} className="hover:underline">
+            <button onClick={handleScrollToTop} className="hover:underline">
               Back to the top
             </button>
             <button
