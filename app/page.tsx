@@ -27,6 +27,9 @@ export default function Portfolio() {
             <Link href="/activity" className="hover:underline">
               activity
             </Link>
+            <Link href="/experience" className="hover:underline">
+              experience
+            </Link>
           </nav>
         </header>
 
