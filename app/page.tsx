@@ -52,64 +52,6 @@ export default function Portfolio() {
           </p>
         </section>
 
-        {/* Latest Posts Section */}
-        <section className="mb-8">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-              Latest Posts
-            </h2>
-            <Link href="https://substack.com/@devanshjaiin"className="text-sm hover:underline">
-              See all posts
-            </Link>
-          </div>
-          <ul className="space-y-3">
-            <li>
-              <Link href="/blog/summer-2025-internship-shopify" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • Interning at an Engineering Consulting Firm Summer 2025
-              </Link>
-            </li>
-            <li>
-              <Link href="https://open.substack.com/pub/devanshjaiin/p/what-university-doesnt-teach-you?r=6ahwx6&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • What University Doesn't Teach You About Real World Development
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog/learning-relational-algebra" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • Notes on Learning Linear Algebra
-              </Link>
-            </li>
-          </ul>
-        </section>
-
-        {/* Recent Projects Section */}
-        <section className="mb-16">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
-              Recent Projects
-            </h2>
-            <Link href="https://github.com/Devansh015?tab=repositories" className="text-sm hover:underline">
-              See all projects
-            </Link>
-          </div>
-          <ul className="space-y-3">
-            <li>
-              <Link href="https://github.com/Devansh015/neuropharma-simlab" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • Neuropharma-Simlab – Brain Simulation using Cellular Automata
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/Devansh015/wluNest-App" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • wluNest – Student Housing Database
-              </Link>
-            </li>
-            <li>
-              <Link href="https://github.com/Devansh015/go-url-shortner" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • URL Shortener – Fast & Minimal Link Tool in Go
-              </Link>
-            </li>
-          </ul>
-        </section>
-
         {/* Experience Timeline Section */}
         <section className="mb-16">
           <div className="flex justify-between items-center mb-6">
@@ -235,6 +177,64 @@ export default function Portfolio() {
               </div>
             </div>
           </div>
+        </section>
+
+        {/* Latest Posts Section */}
+        <section className="mb-8">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+              Latest Posts
+            </h2>
+            <Link href="https://substack.com/@devanshjaiin"className="text-sm hover:underline">
+              See all posts
+            </Link>
+          </div>
+          <ul className="space-y-3">
+            <li>
+              <Link href="/blog/summer-2025-internship-shopify" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
+                • Interning at an Engineering Consulting Firm Summer 2025
+              </Link>
+            </li>
+            <li>
+              <Link href="https://open.substack.com/pub/devanshjaiin/p/what-university-doesnt-teach-you?r=6ahwx6&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
+                • What University Doesn't Teach You About Real World Development
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog/learning-relational-algebra" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
+                • Notes on Learning Linear Algebra
+              </Link>
+            </li>
+          </ul>
+        </section>
+
+        {/* Recent Projects Section */}
+        <section className="mb-16">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+              Recent Projects
+            </h2>
+            <Link href="https://github.com/Devansh015?tab=repositories" className="text-sm hover:underline">
+              See all projects
+            </Link>
+          </div>
+          <ul className="space-y-3">
+            <li>
+              <Link href="https://github.com/Devansh015/neuropharma-simlab" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
+                • Neuropharma-Simlab – Brain Simulation using Cellular Automata
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/Devansh015/wluNest-App" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
+                • wluNest – Student Housing Database
+              </Link>
+            </li>
+            <li>
+              <Link href="https://github.com/Devansh015/go-url-shortner" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
+                • URL Shortener – Fast & Minimal Link Tool in Go
+              </Link>
+            </li>
+          </ul>
         </section>
 
         {/* Degree Progress Section */}
