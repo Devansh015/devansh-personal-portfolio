@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Image from "next/image"
 import DegreeProgress from "./DegreeProgress"
 import TypewriterName from "./TypewriterName"
 import { useTheme } from "./ThemeProvider"
@@ -67,12 +68,18 @@ export default function Portfolio() {
             <div className="space-y-8">
               {/* Jain Consultants */}
               <div className="relative flex items-start">
-                <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 ${
+                <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 overflow-hidden ${
                   theme === "dark" 
-                    ? "bg-[#0f0f0f] border-blue-500 text-blue-400" 
-                    : "bg-white border-blue-500 text-blue-600"
+                    ? "bg-[#0f0f0f] border-blue-500" 
+                    : "bg-white border-blue-500"
                 }`}>
-                  🏢
+                  <Image
+                    src="/image1.png"
+                    alt="Jain Consultants"
+                    width={32}
+                    height={32}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="ml-6 flex-grow">
                   <div className={`p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
@@ -104,12 +111,18 @@ export default function Portfolio() {
 
               {/* OneDrug */}
               <div className="relative flex items-start">
-                <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 ${
+                <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 overflow-hidden ${
                   theme === "dark" 
-                    ? "bg-[#0f0f0f] border-purple-500 text-purple-400" 
-                    : "bg-white border-purple-500 text-purple-600"
+                    ? "bg-[#0f0f0f] border-purple-500" 
+                    : "bg-white border-purple-500"
                 }`}>
-                  💊
+                  <Image
+                    src="/OneDrug-Photoroom.png"
+                    alt="OneDrug"
+                    width={32}
+                    height={32}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="ml-6 flex-grow">
                   <div className={`p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
@@ -141,12 +154,18 @@ export default function Portfolio() {
 
               {/* Accumine Technologies */}
               <div className="relative flex items-start">
-                <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 ${
+                <div className={`flex-shrink-0 w-12 h-12 rounded-full border-2 flex items-center justify-center z-10 overflow-hidden ${
                   theme === "dark" 
-                    ? "bg-[#0f0f0f] border-orange-500 text-orange-400" 
-                    : "bg-white border-orange-500 text-orange-600"
+                    ? "bg-[#0f0f0f] border-orange-500" 
+                    : "bg-white border-orange-500"
                 }`}>
-                  ⚙️
+                  <Image
+                    src="/accuminetech-Photoroom.png"
+                    alt="Accumine Technologies"
+                    width={32}
+                    height={32}
+                    className="object-contain"
+                  />
                 </div>
                 <div className="ml-6 flex-grow">
                   <div className={`p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
