@@ -147,9 +147,6 @@ export default function ActivityPage() {
             <Link href="/activity" className="hover:underline font-semibold">
               activity
             </Link>
-            <Link href="/experience" className="hover:underline">
-              experience
-            </Link>
           </nav>
         </header>
 

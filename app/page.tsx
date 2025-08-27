@@ -33,9 +33,6 @@ export default function Portfolio() {
             <Link href="/activity" className="hover:underline">
               activity
             </Link>
-            <Link href="/experience" className="hover:underline">
-              experience
-            </Link>
           </nav>
         </header>
 
@@ -119,9 +116,6 @@ export default function Portfolio() {
             <h2 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
               Experience Timeline
             </h2>
-            <Link href="/experience" className="text-sm hover:underline">
-              See full details
-            </Link>
           </div>
           
           <div className="relative">
