@@ -96,8 +96,8 @@ export default function Portfolio() {
                       </div>
                       <span className={`text-sm font-medium px-3 py-1 rounded-full ${
                         theme === "dark" 
-                          ? "bg-green-900/30 text-green-400 border border-green-700" 
-                          : "bg-green-50 text-green-700 border border-green-200"
+                          ? "bg-blue-900/30 text-blue-400 border border-blue-700" 
+                          : "bg-blue-50 text-blue-700 border border-blue-200"
                       }`}>
                         May 2025 - Aug 2025
                       </span>
@@ -182,8 +182,8 @@ export default function Portfolio() {
                       </div>
                       <span className={`text-sm font-medium px-3 py-1 rounded-full ${
                         theme === "dark" 
-                          ? "bg-gray-800 text-gray-400 border border-gray-600" 
-                          : "bg-gray-100 text-gray-700 border border-gray-300"
+                          ? "bg-blue-900/30 text-blue-400 border border-blue-700" 
+                          : "bg-blue-50 text-blue-700 border border-blue-200"
                       }`}>
                         Sep 2022 - Dec 2022
                       </span>
