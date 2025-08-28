@@ -44,12 +44,11 @@ export default function Portfolio() {
             <TypewriterName/>
           </h2>
           <ul className="mb-6 space-y-2">
-            <li>🎓 Third Year Computer Science @ Wilfrid Laurier University</li>
-            <li>🧠 I enjoy building meaningful full-stack apps</li>
+            <li>🎓 Third Year Computer Science Student @ Wilfrid Laurier University</li>
+            <li>🧠 I enjoy building meaningful full-stack apps and exploring AI/ML </li>
           </ul>
           <p className="leading-relaxed">
-            In my free time, I enjoy film, basketball, and learning more about machine learning to help solve real-world
-            problems.
+            In my free time, I enjoy film, playing basketball, or going to the gym. Feel free to reach out!
           </p>
         </section>
 
