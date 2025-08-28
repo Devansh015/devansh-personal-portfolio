@@ -48,7 +48,7 @@ export default function Portfolio() {
             <li>🧠 I enjoy building meaningful full-stack apps and exploring AI/ML </li>
           </ul>
           <p className="leading-relaxed">
-            In my free time, I enjoy film, playing basketball, or going to the gym. Feel free to reach out!
+            In my spare time, I enjoy film, playing basketball, or going to the gym. Feel free to reach out!
           </p>
         </section>
 
