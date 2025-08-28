@@ -82,15 +82,13 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="ml-6 flex-grow">
-                  <div className={`p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
-                    theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"
-                  }`}>
+                  <div className="pt-0 pb-1 px-1 rounded-lg">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                       <div>
-                        <h3 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+                        <h3 className={`text-lg font-bold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
                           Software Engineering Intern
                         </h3>
-                        <p className={`text-base font-medium ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}>
+                        <p className={`text-lg font-medium ${theme === "dark" ? "text-blue-400" : "text-blue-600"}`}>
                           Jain Consultants
                         </p>
                       </div>
@@ -125,15 +123,13 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="ml-6 flex-grow">
-                  <div className={`p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
-                    theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"
-                  }`}>
+                  <div className="pt-0 pb-1 px-1 rounded-lg">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                       <div>
-                        <h3 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+                        <h3 className={`text-lg font-bold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
                           Software Engineering Intern
                         </h3>
-                        <p className={`text-base font-medium ${theme === "dark" ? "text-purple-400" : "text-purple-600"}`}>
+                        <p className={`text-lg font-medium ${theme === "dark" ? "text-purple-400" : "text-purple-600"}`}>
                           OneDrug
                         </p>
                       </div>
@@ -168,15 +164,13 @@ export default function Portfolio() {
                   />
                 </div>
                 <div className="ml-6 flex-grow">
-                  <div className={`p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${
-                    theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"
-                  }`}>
+                  <div className="pt-0 pb-1 px-1 rounded-lg">
                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-2">
                       <div>
-                        <h3 className={`text-lg font-semibold ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
+                        <h3 className={`text-lg font-bold leading-tight ${theme === "dark" ? "text-white" : "text-gray-900"}`}>
                           Software Engineering Intern
                         </h3>
-                        <p className={`text-base font-medium ${theme === "dark" ? "text-orange-400" : "text-orange-600"}`}>
+                        <p className={`text-lg font-medium ${theme === "dark" ? "text-orange-400" : "text-orange-600"}`}>
                           Accumine Technologies
                         </p>
                       </div>
