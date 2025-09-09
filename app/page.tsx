@@ -204,7 +204,7 @@ export default function Portfolio() {
           <ul className="space-y-3">
             <li>
               <Link href="https://devanshjaiin.substack.com/p/interning-at-an-engineering-firm" className={`block p-4 rounded-lg transition-all duration-300 hover:scale-[1.02] hover:shadow-lg ${theme === "dark" ? "hover:bg-gray-900/50" : "hover:bg-gray-50"}`}>
-                • Interning at an Engineering Consulting Firm Summer 2025
+                • Interning at an Engineering Consulting Firm
               </Link>
             </li>
             <li>
