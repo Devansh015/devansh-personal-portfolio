@@ -31,9 +31,6 @@ export default function Portfolio() {
             <Link href="https://substack.com/@devanshjaiin" className="hover:underline">
               blog
             </Link>
-            <Link href="/activity" className="hover:underline">
-              activity
-            </Link>
           </nav>
         </header>
 

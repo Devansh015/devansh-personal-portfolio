@@ -123,9 +123,6 @@ export default function ExperiencePage() {
             <Link href="https://substack.com/@devanshjaiin" className="hover:underline">
               blog
             </Link>
-            <Link href="/activity" className="hover:underline">
-              activity
-            </Link>
             <Link href="/experience" className="hover:underline font-semibold">
               experience
             </Link>
